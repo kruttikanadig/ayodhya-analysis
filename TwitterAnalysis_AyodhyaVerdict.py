@@ -249,20 +249,11 @@ fig.tight_layout(pad = 7)
 fig.show()
 
 
-# In[98]:
-
-
-# Define a function to preprocess the tweets for wordclouds
-def clean_tweet(tweet):
-    clean_tweet =' '.join(re.sub("(@[A-Za-z0-9]+)|(\w+:\/\/\S+)|(#)", " ", tweet).split()) 
-    lean_tweet = re.sub("ayodhya|Ayodhya|Verdict|AyodhyaVerdict|AYODHYAVERDICT|AYODHYA|VERDICT|Supreme|Court|Sunni|Waqf|Board|sunni|waqf|Ram|Janmbhoomi|temple|court|mosque|judgment|judgement|verdict|dispute|amp|SC|today|alternate|land|Case|Hearing|Judgment|Judgement|case", " ", clean_tweet)
-    return lean_tweet
-
 
 # In[99]:
 
 
-# Define a function to preprocess the tweets for wordclouds - new
+# Define a function to preprocess the tweets for wordclouds
 def clean_tweet(tweet):
     clean_tweet =' '.join(re.sub("(@[A-Za-z0-9]+)|(\w+:\/\/\S+)|(#)", " ", tweet).split()) 
     lean_tweet = re.sub("ayodhya|Ayodhya|Verdict|AyodhyaVerdict|AYODHYAVERDICT|AYODHYA|VERDICT|Supreme|Court|Sunni|Waqf|Board|sunni|waqf|Ram|Janmbhoomi|temple|court|mosque|judgment|judgement|verdict|dispute|amp|SC|today|alternate|land|Case|Hearing|Judgment|Judgement|case|acre|Mandir|Muslim|BabriMasjid|Babri|Masjid|build|Islamic|structure|Justice|evidence|site", " ", clean_tweet)
